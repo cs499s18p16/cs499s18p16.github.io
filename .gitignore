@@ -1,0 +1,2 @@
+#exclude secondary files from emacs
+*~
