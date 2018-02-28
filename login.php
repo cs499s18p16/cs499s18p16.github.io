@@ -23,16 +23,7 @@
 
                 <p style="padding: 0 0 2em 0">
 
-                <select name="Role">
-                    <option value="Admin">Admin</option>
-                    <option value="Scrum Master">Scrum Master</option>
-                    <option value="Product Owner">Product Owner</option>
-                    <option value="Team Member">Team Member</option>
-                </select>
-
-                </p>
-
-                <input type="submit" name="" required="submit"> <!- button ->
+               <input type="submit" name="" required="submit"> <!- button ->
 
             </form>
         </div>
@@ -48,25 +39,16 @@ $username = "root";
 $password = "";
 $role = "";
 $db = "scrum";
+$table = "roles";
 
 //create connection
 
-mysql_connect($host,$username,$password);
-mysql_select_db($db);
-
-if(isset(['username'])){
-  $username=$_POST['username'];
-  $password=$POST['password']
-
-  $sql="select * from login form where user ='".$username."'AND password ='".$password"' limit 1";
-  $result = mysql_query($sql);
-  if(mysql_num_rows($result ==1)){
-    echo "You have successfully logged in.";
-    exit();
-  }
-  else{
-    echo"Unauthorized credentials were entered, please try again.";
+$connection = mysql_connect($host,$username,$password);
+mysql_select_db($db,$connection);
+$query = "SELECT id FROM $table";
+if($result){
+while($row = mysql_fetch_array($result)){
+  echo "You have successfully logged in!";
   }
 }
-
- ?>
+?>
