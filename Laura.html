@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-  <h1>Week 1 (2/5-2/9)</h1>
+  <h1>Week 1 (2/5-2/11)</h1>
   <p style="background-color:powderblue;">
   Prior to this week, the group took a visit to Toyota's Georgetown location to tour their facilities, receive an introductory lesson on Scrum, and discuss the story for the first sprint of the project.
   The team also met outside of Toyota's campus to discuss whether to make the project web-based or desktop-based, and what languages we would like to use.  Our first sprint planning meeting was held on 2/6.  We established the goal to implement a login screen for the program.
@@ -12,7 +12,7 @@
   to calculate sprint capacity in scrum teams.  We will then establish the story or group of stories to be completed in our next 1-week sprint.
   </p>
   
-  <h1>Week 2 (2/12 - 2/16)</h1>
+  <h1>Week 2 (2/12 - 2/18)</h1>
   <p style="background-color:powderblue;">
     This week, I assumed the duties of Scrum Master for the team.  I had my first Product Owner/Scrum Master (PO/SM) meeting, where I discussed with the product owner the project backlog and the different methods for analyzing Scrum practices, dealing with interrupts, and breaking up stories unusually high in point value into smaller stories in order to achieve the tight feedback loops most desirable to a Scrum team.  I organized two separate meetings with different subsets of the team to work on this week’s sprint story, which was to give our website authentication the ability to discern between logins of users with four different roles (Product Owner, Scrum Master, Team member, and Admin).  However, we actually experienced some difficulties in completing this sprint story that required breaking it up into smaller pieces, the first priority piece being to configure our website on a solid hosting environment such as AWS (before doing the backend coding required to create user roles).  
 
@@ -20,7 +20,7 @@ As a developer, I registered a domain name for the project website.  I then crea
 
   </p>
   
-   <h1>Week 3 (2/19 - 2/23)</h1>
+   <h1>Week 3 (2/19 - 2/25)</h1>
   <p style="background-color:powderblue;">
     Team member: This week began with our third sprint planning meeting. During this meeting we collaborated with our PO to overcome the impediment we faced last week (we had issues getting our website that will host our database to run correctly through AWS), as our PO has experience with the AWS environment.  By mid-day Tuesday, we discovered our error and were able to remediate it to get the site running.
 
@@ -29,6 +29,29 @@ In our team work meeting Tuesday evening, we discussed the procedure (essentiall
 <br><br>Developer: I added some html to our authentication page to allow for users to choose which role they want to log in under, pushed the changes to github, and reuploaded the html to our AWS account.  
 
 <br><br>Scrum Master:  I worked with my team and their availabilities to schedule an appointment with Presentation U to review our midterm presentation, and began designing a schedule for preparing and practicing our project presentation.  
+
+  </p>
+  
+   <h1>Week 4 (2/26 - 3/4)</h1>
+  <p style="background-color:powderblue;">
+    The team encountered an impediment at the very end of Week 3 with our website configuration that prevented usage of Amazon RDS.  However, despite absence of Amazon RDS, we were able to write the code needed to complete the sprint story that tasked us to add ability for our tool to distinguish user roles by employing database programming locally. However, in response to the impediment we faced, we added fixing our Amazon RDS problem to our To Do list as its own story.      
+<br> <br>
+Due to midterm and spring break conflicts, this sprint was extended until May 19th to give the team time to solve the issues of the previous week, and also to focus on our midterm presentation.  However, as Scrum Master, I still met with our PO to create these future sprint stories: 1) As a user I want a landing page for my Team so that I can communicate availability across the team, and 2) As user I want the ability to create teams in the tool so that I can get data on one group of users.  Story 1 was put on the To Do for the next sprint, while story 2 was put onto the sprint backlog for future sprints.  
+<br> <br>
+For our midterm presentation,  I compiled a list of deliverables that were needed for the project website, and drew parallels between those deliverables and the visuals we would be using for our presentation.  These deliverables included: synopses for the overview and environment of the scrum tool application, an overall module diagram of the tool, an ER diagram of the database backend, user screens (our login page, landing page, default page for when a user has no distinctive team information, and potential data representations), and text based descriptions of user scenarios.  Talking amongst all our team members, we were able to divide the work up equally.
+<br> <br>
+I volunteered to create our ER diagram, as I am currently in a database programming course and have fresh knowledge of the concepts required.  I am also creating a list of user scenarios with descriptions.
+
+  </p>
+  
+  <h1>Week 5 (3/5 - 3/18)</h1>
+  <p style="background-color:powderblue;">
+    This week, the group met to put together our presentation and practice it, both with each other and with the aid of Presentation U!.  On Wednesday we presented formally, with the following structure: I presented an introduction to our project, which included a brief overview of Scrum and the customer’s need for our project.  Emma presented the user screens and scenarios we are working on for our project.  Poe presented the backend information about our project’s infrastructure and overall data flow.  Lastly, Robert gave a status report and a goal summary for our project.  
+
+<br><br>
+
+Unfortunately, presenting on Wednesday along with midterm exams limited our progress through the rest of the week leading to Spring Break, and most of our group travelled and had limited capacity for work during the break.  However, I was still able to meet with our customer on Tuesday, March 13th, and discuss the goals for the next sprint that will hopefully restart the team’s momentum when classes resume and team members return to town.  First, we plan to meet as a team and find a resolution to our infrastructure issues, which will potentially involve migrating our code from AWS to the CS Department Multilab machines (something already discussed and approved with our customer if we wish to do so).  Upon finalizing our infrastructure plans, our first story will be to successfully implement and retest the new infrastructure.  Second, we will resume construction of the four landing pages of the web application that correspond to the user roles: Admin, Scrum Master, Product Owner, and Team Member.  Once we achieve successful navigation to the landing pages, we will begin adding functionality to each page that is unique to the user role it corresponds to.  
+ 
 
   </p>
 </html>
