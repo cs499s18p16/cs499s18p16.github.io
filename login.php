@@ -31,11 +31,6 @@
 
 
 </html>
-<<<<<<< HEAD
-    
- ?>
-=======
-
 
 <?php
 $host = "localhost";
@@ -56,4 +51,3 @@ while($row = mysql_fetch_array($result)){
   }
 }
 ?>
->>>>>>> 4d43b7c9cbce1ce5f2c46a9a543a8ba56c5dfda9
