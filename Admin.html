@@ -7,34 +7,54 @@
     <title>Scrum Tool Admin</title>
     
     <style>
-      .dropbtn{
+      
+      .navbar{
+        overflow: hidden;
+        background-color: #333;
+        fount-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+     
+      .dropdown{
+        float: left;
+        overflow: hidden;
+      }
+      
+      .drodown .dropbtn{
         background-color: #aec6f9;
         color: #0f0f0f;
         padding: 8px;
         font-size: 16px;
         border: none;
         cursor: pointer;
-      }
-      
-      .dropdown{
-        position:relative;
-        display:inline-block;
+        outline: none;
+        background-color: powderblue;
       }
       
       .dropdown-content{
         display: none;
         position: absolute;
         background-color: #ffffff;
-        min-width: 140px;
-        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
       }
       
       .dropdown-content a {
+        float: none:
         color: #0f0f0f;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+        text-align: left;
       }
       
       .dropdown-content a:hover {background-color: #9dbaf9}
@@ -43,7 +63,7 @@
         display: block;
       }
       
-      .dropdown:hover .dropbtn {
+      .navbar a:hover, .dropdown:hover .dropbtn {
         background-color: #89adf9;
       }
       
