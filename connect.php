@@ -1,10 +1,10 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
+$host = "mysql.cs.uky.edu";
+$username = "jtpo224";
+$password = "u0895474";
 $role = "";
 $db = "scrum";
-$table = "roles";
+$table = "users";
 
 //create connection
 
