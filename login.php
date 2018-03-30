@@ -17,7 +17,7 @@ else{
        header("Location: Admin.php");
      }
      if ($_SESSION['ID'] = '2'){
-       header("Location: landingpage.php");
+       header("Location: ScrumMasterHomePage.php");
      }
    }
 
