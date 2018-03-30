@@ -14,7 +14,10 @@ else{
    if (isset($_SESSION['ID'])){
      //echo $_SESSION['ID'];
      if ($_SESSION['ID'] = '1'){
-       header("Location: Admin.html");
+       header("Location: Admin.php");
+     }
+     if ($_SESSION['ID'] = '2'){
+       header("Location: landingpage.php");
      }
    }
 
