@@ -3,93 +3,50 @@
 <html>
 
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scrum Tool Admin</title>
+    <meta charset="utf-8">
+    <title>Welcome | Home Page</title>
     <link rel="stylesheet" href="admin_style_sheet.css">
-    <style>
-      
-      .navbar{
-        overflow: hidden;
-        background-color: #333;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      
-      .navbar a {
-        float: right;
-        font-size: 16px;
-        color: #0f0f0f;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-     
-      .dropdown{
-        float: right;
-        overflow: hidden;
-      }
-      
-      .dropdown .dropbtn{
-        background-color: #aec6f9;
-        color: #0f0f0f;
-        padding: 14px 16px;
-        font-size: 16px;
-        border: none;
-        outline: none;
-        margin: 0;
-        font-family: inherit;
-      }
-      
-      .dropdown-content{
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content a {
-        float: none;
-        color: #0f0f0f;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-      
-      .dropdown-content a:hover {background-color: #9dbaf9;}
-      
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      
-      .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: #89adf9;
-      }
-      
-    </style>
-      
-        
   </head>
    
   <body>
 
   <div class="navbar">
     <div class="dropdown">
-      <button class="dropbtn" style="color:blue">My Account<i class="fa fa-caret-down"></i></button>
+      <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button>
       <div class="dropdown-content">
         <a href="#">Profile</a>
-        <a href="#">Log Out</a>
+        <a href="https://cs499s18p16.github.io/scrumtool.html">Log Out</a>
       </div>
     </div>
-     <a href="#" style="background-color:#aec6f9;font-size:16px;">Home</a>
+     <a href="#">Home</a>
   </div>
     
-  <h2>TEAMS</h2>
-  <ul>
-    <li>Scrumbledore's Army</li>
-    <li>Scrum Lords</li>
-    <li>Scrum of the Earth</li>
-  </ul>
+  <section class="content">
+    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome, Admin</h2>
+    <br>
+    <h3 style="font-size:25px;text-align: center;color: #cfd8dc">TEAMS</h3>
+    
+    <table border=1 width=75% align=center bgcolor="#101721" >
+      <tr>
+        <th>Team Name</th>
+      </tr>
+      <tr>
+        <td align=center class=open><br>Scrumbledore's Army<br></td>
+        <td align=center class=open><br>Edit<br></td>
+        <td align=center class=open><br>Remove<br></td>
+      </tr>
+      <tr>
+        <td align=center class=open><br>Scrum Lords<br></td>
+        <td align=center class=open><br>Edit<br></td>
+        <td align=center class=open><br>Remove<br></td>
+      </tr>
+      <tr>
+        <td align=center class=open><br>Scrum of the Earth<br></td>
+        <td align=center class=open><br>Edit<br></td>
+        <td align=center class=open><br>Remove<br></td>
+      </tr>
+    </table>
+  </section>
+    
   </body>
 </html>
