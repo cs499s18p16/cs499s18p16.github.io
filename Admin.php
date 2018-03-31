@@ -5,7 +5,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scrum Tool Admin</title>
-    <link rel="stylesheet" href="style_admin.css">
+    <link rel="stylesheet" href="admin_style_sheet.css">
     <style>
       
       .navbar{
