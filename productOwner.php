@@ -19,7 +19,7 @@
       <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button>
       <div class="dropdown-content">
         <a href="#">Profile</a>
-        <a href="https://cs499s18p16.github.io/scrumtool.html">Log Out</a>
+        <a href="logout.php">Log Out</a>
       </div>
     </div>
      <a href="#">Home</a>
