@@ -70,27 +70,3 @@ body{
     background-color: #202D4C;
   }
 
-.content {
-    margin-top: 70px;
-}
-
-.content p{
-    width: 1050px;
-    margin: 5px auto;
-    font-size: 20px;
-    line-height: 30px;
-}
-
-table{
-    color: #ffffff;
-}
-td{
-    height: 50px;
-}
-
-h2{
-    font-family: cursive;
-    font-size: 50px;
-    text-align: center;
-    color: #cfd8dc;
-}
