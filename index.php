@@ -35,9 +35,7 @@
 
     </body>
 </br>
-<form action="logout.php">
-  <button>Log Out</button>
-</form>
+
 
 
 </html>

@@ -7,7 +7,7 @@
     <title>Welcome | Home Page</title>
     <link rel="stylesheet" href="admin_style_sheet.css">
   </head>
-   
+
   <body>
 
   <div class="navbar">
@@ -16,16 +16,17 @@
       <div class="dropdown-content">
         <a href="#">Profile</a>
         <a href="logout.php">Log Out</a>
+        <a href="adduser.php">Add User</a>
       </div>
     </div>
      <a href="#">Home</a>
   </div>
-    
+
   <section class="content">
     <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome, Admin</h2>
     <br>
     <h3 style="font-size:25px;text-align: center;color: #cfd8dc">TEAMS</h3>
-    
+
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>
         <th>Team Name</th>
@@ -47,6 +48,6 @@
       </tr>
     </table>
   </section>
-    
+
   </body>
 </html>
