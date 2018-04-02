@@ -1,4 +1,4 @@
-<<?php
+<?php
 session_start();
 ?>
 
@@ -11,8 +11,7 @@ session_start();
 <title>ADD NEW USER</title>
 </head>
 <body>
-  <form action="signup.php"method="POST">
-    <input type="text" name="userid" placeholder="ID (1-5)">
+  <form action="signup.php" method="POST">
     <input type="text" name="username" placeholder="Username">
     <input type="password" name="password" placeholder="Password">
     <input type="text" name="role" placeholder="Role">

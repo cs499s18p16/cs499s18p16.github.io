@@ -2,9 +2,7 @@
 $host = "mysql.cs.uky.edu";
 $username = "jtpo224";
 $password = "u0895474";
-$role = "";
-$db = "scrum";
-$table = "users";
+$db = "jtpo224";
 
 //create connection
 
