@@ -1,3 +1,7 @@
+<?php
+   session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -23,7 +27,7 @@
   </div>
 
   <section class="content">
-    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome, Admin</h2>
+    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome, <?php echo($_SESSION['user']['email']) ?> </h2>
     <br>
     <h3 style="font-size:25px;text-align: center;color: #cfd8dc">TEAMS</h3>
 

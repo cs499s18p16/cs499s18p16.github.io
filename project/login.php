@@ -11,15 +11,17 @@ if (!$row = mysqli_fetch_assoc($result)){
 }
 else
 {
-  $_SESSION['role'] = $row["role"];
-   if (isset($_SESSION['role']))
+  unset($row['hashed_password']);
+  $_SESSION['user'] = array();
+  $_SESSION['user'] = $row;
+   if (isset($_SESSION['user']['role']))
    {
-     //echo $_SESSION['role'];
-     if ($_SESSION['role'] == 'admin')
+     //echo $_SESSION['user']['role'];
+     if ($_SESSION['user']['role'] == 'admin')
      {
        header("Location: Admin.php");
      }
-     if ($_SESSION['role'] == 'scrum master')
+     if ($_SESSION['user']['role'] == 'scrum master')
      {
 	 header("Location: ScrumMasterHomePage.php");
      }
