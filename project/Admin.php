@@ -21,6 +21,7 @@
         <a href="#">Profile</a>
         <a href="logout.php">Log Out</a>
         <a href="adduser.php">Add User</a>
+        <a href="addteam.php">Add Team</a>
       </div>
     </div>
      <a href="#">Home</a>
