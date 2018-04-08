@@ -1,5 +1,11 @@
 <?php
-    session_start();
+   if(!$_SESSION['login']){
+     header("Location: index.php");
+     die;
+   }
+   else {
+     session_start();
+   }
 ?>
 <!DOCTYPE html>
 
@@ -12,5 +18,5 @@
     <form action="add_to_team.php" method="POST">
         <input type="text" name="teamname" placeholder="Team Name">
         <button type="submit">ADD</button>
-    </form> 
+    </form>
 </html>

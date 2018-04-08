@@ -1,5 +1,11 @@
 <?php
-
+   if(!$_SESSION['login']){
+     header("Location: index.php");
+     die;
+   }
+   else {
+     session_start();
+   }
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +17,7 @@
     <title>Welcome | Home Page</title>
     <link rel="stylesheet" href="PO_style_sheet.css">
   </head>
-   
+
   <body>
 
   <div class="navbar">
@@ -24,10 +30,10 @@
     </div>
      <a href="#">Home</a>
   </div>
-    
+
   <section class="content">
     <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome to Scrumbledore's Army</h2>
-    
+
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>
       <th width=5%>Monday</th>
@@ -49,6 +55,6 @@
       </tr>
     </table>
   </section>
-    
+
   </body>
 </html>
