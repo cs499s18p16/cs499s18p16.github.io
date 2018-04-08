@@ -9,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-
+<!--This is HTML code to layout the landing page for the Product Owner, which is linked to a CSS style sheet -->
 <html>
 
   <head>

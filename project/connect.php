@@ -1,6 +1,6 @@
 <?php
 $host = "mysql.cs.uky.edu";
-$username = "jtpo224";
+$username = "jtpo224"; // variable to use for logging into the multilab server where the database is located
 $password = "u0895474";
 $db = "jtpo224";
 

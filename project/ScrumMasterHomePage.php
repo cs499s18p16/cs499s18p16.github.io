@@ -8,7 +8,7 @@
    }
 ?>
 <!DOCTYPE html>
-
+<!--This is the HTML code providing the layout for the Scrum Master landing page, which is also linked to a CSS style sheet -->
 <html>
 
     <head>

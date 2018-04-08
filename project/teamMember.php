@@ -1,6 +1,6 @@
 <?php
    if(!$_SESSION['login']){
-     header("Location: index.php");
+     header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      die;
    }
    else {
@@ -9,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-
+<!--This is the HTML code providing the layout for the team member landing page, which is also linked to a CSS style sheet -->
 <html>
 
   <head>
