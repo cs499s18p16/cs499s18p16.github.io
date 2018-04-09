@@ -6,19 +6,25 @@
  *
  * */
 require 'connect.php';
-
+session_start();
+   
 $teamname = $_POST['teamname']; //team name to add to
 $username = $_POST['username']; //username to add to team
 
-$sql = "SELECT * FROM users WHERE email=$username"; //query to determine if user exists
-
-//if user does exist, update user's TID --> $teamname
-if($sql != NULL){
-    $sql = "INSERT INTO users (TID) VALUES ($teamname)";
+$sql = "SELECT * FROM users WHERE email = '$username'"; //query to determine if user exists
+$result = $connection->query($sql);
+if(!isset($result))
+{
+	echo $connection->error;
 }
-//else, user cannot be added because they do not exist
-else{
-    echo "User does not exist!";
+else
+{
+$row = $result->fetch_assoc();
+}
+if(isset($row))
+{
+	$sql = "UPDATE users SET TID = '$teamname' WHERE UID = ". $row['UID'];
+	$connection->query($sql);
 }
 ?>
 

@@ -1,7 +1,7 @@
 <?php
 //This file is to run the login process by making sure the credentials entered into the login page match credentials within the database
 session_start();
-include 'connect.php'; // including the connect.php which is the connection to the database itself
+require 'connect.php'; // including the connect.php which is the connection to the database itself
 $username = $_POST['username'];
 $password = $_POST['password'];
 
