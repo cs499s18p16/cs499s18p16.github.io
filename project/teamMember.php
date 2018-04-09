@@ -1,11 +1,11 @@
 <?php
-   if(!$_SESSION['login']){
-     header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
-     die;
-   }
-   else {
      session_start();
-   }
+     if(!isset($_SESSION['user']['role']) || $_SESSION['user']['role'] != 'developer')
+     {
+	header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
+     	die;
+     }
+
 ?>
 
 <!DOCTYPE html>

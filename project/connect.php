@@ -1,4 +1,11 @@
 <?php
+/*
+This file is used to connect the web application to the mysql server.
+The first four variables: "host", "username", "password", and "db" are
+changed to reflect whatever host, username, password and database name
+are used with the implementation.
+*/
+
 $host = "mysql.cs.uky.edu";
 $username = "jtpo224"; // variable to use for logging into the multilab server where the database is located
 $password = "u0895474";

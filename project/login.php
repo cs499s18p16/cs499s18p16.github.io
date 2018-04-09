@@ -1,15 +1,16 @@
 <?php
 //This file is to run the login process by making sure the credentials entered into the login page match credentials within the database
 session_start();
-$_SESSION['login'] = true; // setting a variable to true for security reasons; does not allow access to pages without login verification
 include 'connect.php'; // including the connect.php which is the connection to the database itself
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 $sql = "SELECT * FROM users WHERE email = '$username' AND hashed_password = '$password'"; // credential verification process
 $result = $connection->query($sql);
-if (!$row = mysqli_fetch_assoc($result)){
-  echo "Incorrect Username and/or Password! Please try again.";
+if (!$row = mysqli_fetch_assoc($result))
+{
+   header("Location: index.php");
+   $_SESSION['wrong'] = TRUE;
 }
 else // if the correct credentials are entered, based on who logs in certain code will be ran
 {
@@ -28,9 +29,9 @@ else // if the correct credentials are entered, based on who logs in certain cod
 	 header("Location: ScrumMasterHomePage.php");
      }
      if ($_SESSION['user']['role'] == 'product owner'){
-       header("Location: ProductOwner.php");
+       header("Location: productOwner.php");
      }
-     if ($_SESSION['user']['role'] == 'team member'){
+     if ($_SESSION['user']['role'] == 'developer'){
        header("Location: teamMember.php");
      }
    }
