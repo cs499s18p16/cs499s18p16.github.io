@@ -1,4 +1,8 @@
 <?php
+/*File: getTeamName.php
+ * Purpose: Fetch team name from admin that will be used to create a team.
+ *
+ * */
     session_start();
 ?>
 <!DOCTYPE html>
