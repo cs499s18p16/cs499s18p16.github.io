@@ -21,7 +21,7 @@
         <a href="#">Profile</a>
         <a href="logout.php">Log Out</a>
         <a href="adduser.php">Add User</a>
-        <a href="addteam.php">Add Team</a>
+        <a href="getTeamName.php">Add Team</a>
       </div>
     </div>
      <a href="#">Home</a>
@@ -37,22 +37,18 @@
         <th>Team Name</th>
       </tr>
       <tr>
-        <td align=center class=open><br>Scrumbledore's Army<br></td>
-        <td align=center class=open><br>Edit<br></td>
-        <td align=center class=open><br>Remove<br></td>
+        <td align=center class=open><br><a href="getUsername.php">Scrumbledore's Army</a><br></td>
       </tr>
       <tr>
-        <td align=center class=open><br>Scrum Lords<br></td>
-        <td align=center class=open><br>Edit<br></td>
-        <td align=center class=open><br>Remove<br></td>
+        <td align=center class=open><br><a href="#">Scrum Lords</a><br></td>
       </tr>
       <tr>
-        <td align=center class=open><br>Scrum of the Earth<br></td>
-        <td align=center class=open><br>Edit<br></td>
-        <td align=center class=open><br>Remove<br></td>
+        <td align=center class=open><br><a href="#">Scrum of the Earth</a><br></td>
       </tr>
     </table>
+
   </section>
 
   </body>
 </html>
+

@@ -1,16 +1,11 @@
 <?php
-    session_start();
+    require 'connect.php';
+
+    $teamname = $_POST['teamname'];
+    $sql = "INSERT INTO teams (TID) VALUES ('$teamname')";
+
+    $result = mysqli_query($connection, $sql);
+    header("Location: Admin.php");
+
 ?>
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>ADD NEW TEAM</title>
-    </head>
-
-    <form action="add_to_team.php" method="POST">
-        <input type="text" name="teamname" placeholder="Team Name">
-        <button type="submit">ADD</button>
-    </form> 
-</html>
