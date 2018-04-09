@@ -7,9 +7,9 @@ are used with the implementation.
 */
 
 $host = "mysql.cs.uky.edu";
-$username = "lblo223"; // variable to use for logging into the multilab server where the database is located
-$password = "V|ennawaits4u<3";
-$db = "lblo223";
+$username = "jtpo224"; // variable to use for logging into the multilab server where the database is located
+$password = "u0895474";
+$db = "jtpo224";
 
 //create connection between the database and the web app
 

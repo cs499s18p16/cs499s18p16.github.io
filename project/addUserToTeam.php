@@ -20,11 +20,13 @@ if(!isset($result))
 else
 {
 $row = $result->fetch_assoc();
-}
 if(isset($row))
 {
 	$sql = "UPDATE users SET TID = '$teamname' WHERE UID = ". $row['UID'];
 	$connection->query($sql);
+
+}
+header("Location: Admin.php");
 }
 ?>
 
