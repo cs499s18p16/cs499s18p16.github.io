@@ -1,9 +1,14 @@
 <?php
-  session_start();
+   if(!$_SESSION['login']){
+     header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
+     die;
+   }
+   else {
+     session_start();
+   }
 ?>
-
 <!DOCTYPE html>
-
+<!--This is the HTML code providing the layout for the Scrum Master landing page, which is also linked to a CSS style sheet -->
 <html>
 
     <head>
@@ -15,40 +20,40 @@
     <body>
         <div class="wrapper">
 
-        
+
            <!-- <img src="toyota.png"> -->
 
             <div class="navbar">
-               
+
                 <div class="dropdown">
                     <button class="dropbtn" onclick="myFunction()">My Account<i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content" id="myDropdown">
                         <a href="#">Profile</a>
                         <a href="logout.php">Logout</a>
                     </div>
-            
-                </div> 
-                
+
+                </div>
+
                 <a href="#">Project</a>
                 <a href="#">Home</a>
             </div>
-                
-            
+
+
         </div>
 
         <section class="content">
             <h2>Welcome To Scrumbledore's Army</h2>
             <!--
             <p>
-                
-                <iframe src="https://calendar.google.com/calendar/embed?title=Availability&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5il39f8usdd92j6392o40dgp80%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FNew_York" 
+
+                <iframe src="https://calendar.google.com/calendar/embed?title=Availability&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5il39f8usdd92j6392o40dgp80%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FNew_York"
                 style="border-width:0" width="1000" height="700" frameborder="0" scrolling="no">
                 </iframe>
-            
+
             </p>
         -->
 
-           
+
             <table border=1 width=75% align=center bgcolor="#607d8b" >
                 <tr>
                 <th width=5%>Mon</th>
@@ -77,4 +82,3 @@
 
 
 </html>
-

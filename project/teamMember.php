@@ -1,9 +1,15 @@
 <?php
-
+   if(!$_SESSION['login']){
+     header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
+     die;
+   }
+   else {
+     session_start();
+   }
 ?>
 
 <!DOCTYPE html>
-
+<!--This is the HTML code providing the layout for the team member landing page, which is also linked to a CSS style sheet -->
 <html>
 
   <head>
@@ -11,7 +17,7 @@
     <title>Welcome | Home Page</title>
     <link rel="stylesheet" href="TM_style_sheet.css">
   </head>
-   
+
   <body>
 
   <div class="navbar">
@@ -25,10 +31,10 @@
      <a href="#">Availability</a>
      <a href="#">Home</a>
   </div>
-    
+
   <section class="content">
     <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome to Scrumbledore's Army</h2>
-    
+
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>
       <th width=5%>Monday</th>
@@ -50,6 +56,6 @@
       </tr>
     </table>
   </section>
-    
+
   </body>
 </html>
