@@ -19,9 +19,6 @@
     <body>
         <div class="wrapper">
 
-
-           <!-- <img src="toyota.png"> -->
-
             <div class="navbar">
 
                 <div class="dropdown">
@@ -41,17 +38,8 @@
         </div>
 
         <section class="content">
-            <h2>Welcome To Scrumbledore's Army</h2>
-            <!--
-            <p>
-
-                <iframe src="https://calendar.google.com/calendar/embed?title=Availability&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=5il39f8usdd92j6392o40dgp80%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FNew_York"
-                style="border-width:0" width="1000" height="700" frameborder="0" scrolling="no">
-                </iframe>
-
-            </p>
-        -->
-
+            <h2>Welcome To Scrumbledore's Army</h2> <!-- Team name -->
+            
 
             <table border=1 width=75% align=center bgcolor="#607d8b" >
                 <tr>
@@ -63,14 +51,16 @@
                 <th width=5%>Sat</th>
                 <th width=5%>Sun</th>
                 </tr>
+
+                <!-- Team availability percentage -->
                 <tr>
-                <td align=center rowspan=8 class=open><br>95%<br> </td>
-                <td align=center rowspan=8 class=open><br>90%<br> </td>
-                <td align=center rowspan=8 class=open><br>97%<br> </td>
-                <td align=center rowspan=8 class=open><br>85%<br> </td>
-                <td align=center rowspan=8 class=open><br>80%<br> </td>
-                <td align=center rowspan=8 class=open><br>65%<br> </td>
-                <td align=center rowspan=8 class=open><br>50%<br> </td>
+                <td align=center><br>95%<br> </td>
+                <td align=center><br>90%<br> </td>
+                <td align=center><br>97%<br> </td>
+                <td align=center><br>85%<br> </td>
+                <td align=center><br>80%<br> </td>
+                <td align=center><br>65%<br> </td>
+                <td align=center><br>50%<br> </td>
                 </tr>
 
             </table>
