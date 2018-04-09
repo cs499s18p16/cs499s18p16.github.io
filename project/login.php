@@ -27,6 +27,12 @@ else // if the correct credentials are entered, based on who logs in certain cod
      {
 	 header("Location: ScrumMasterHomePage.php");
      }
+     if ($_SESSION['user']['role'] == 'product owner'){
+       header("Location: ProductOwner.php");
+     }
+     if ($_SESSION['user']['role'] == 'team member'){
+       header("Location: teamMember.php");
+     }
    }
 
 }
