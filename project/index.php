@@ -33,7 +33,7 @@
     <head>
         <meta charset="utf-8">
         <title>Toyota Scrum Tool</title>
-        <link rel="stylesheet" href="style.css"> <!--Linking the CSS style page created for the login page-->
+        <link rel="stylesheet" href="login_style.css"> <!--Linking the CSS style page created for the login page-->
     </head>
     <body>
         <div class="box">
