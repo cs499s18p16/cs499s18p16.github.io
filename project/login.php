@@ -32,7 +32,12 @@ else // if the correct credentials are entered, based on who logs in certain cod
        header("Location: productOwner.php");
      }
      if ($_SESSION['user']['role'] == 'developer'){
+       if ($_SESSION['user']['tid'] == NULL){
+         header("Location: defaultPage.php");
+       }
+       else{
        header("Location: teamMember.php");
+     }
      }
    }
 
