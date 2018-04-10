@@ -14,7 +14,7 @@ $sql = "SELECT * FROM users WHERE email=$username"; //query to determine if user
 
 //if user does exist, update user's TID --> $teamname
 if($sql != NULL){
-    $sql = "INSERT INTO users (TID) VALUES ($teamname)";
+    $sql = "UPDATE users SET TID = $teamname WHERE email=$username";
 }
 //else, user cannot be added because they do not exist
 else{

@@ -51,7 +51,6 @@
         <td align=center class=open><br><a href="#">Scrum of the Earth</a><br></td>
       </tr>
     </table>
-
   </section>
 
   </body>
