@@ -5,7 +5,6 @@
 		header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      	 	die;
      	 }
-	 require 'connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,40 +14,42 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome | Home Page</title> <!--Creating and setting the title of the landing page, as well as linking the CSS style sheet along with the page -->
-    <link rel="stylesheet" href="admin_style_sheet.css">
+    <link rel="stylesheet" href="navbar.css">
   </head>
 
-  <body>
+  <body background="twocars.jpg">
 
   <div class="navbar">
     <div class="dropdown">
       <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
       <div class="dropdown-content">
         <a href="#">Profile</a>
-        <a href="logout.php">Log Out</a>
         <a href="adduser.php">Add User</a>
         <a href="getTeamName.php">Add Team</a>
+        <a href="logout.php">Log Out</a>
       </div>
     </div>
      <a href="#">Home</a>
   </div>
 
-  <section class="content">
-    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome, <?php echo($_SESSION['user']['email']) ?> </h2> <!-- Landing page will recognize who has logged in and give them a greeting at the top with their name -->
-    <br>
-    <h3 style="font-size:25px;text-align: center;color: #cfd8dc">TEAMS</h3>
+  <section class="content" style="margin-top: 70px">
+    <h2 style="font-family: cursive; font-size: 50px; text-align:center; color: #cfd8dc">Welcome, <?php echo($_SESSION['user']['email']) ?> </h2> <!-- Landing page will recognize who has logged in and give them a greeting at the top with their name -->
 
-    <table border=1 width=75% align=center bgcolor="#101721" >
+  
+    <table border=1 width=35% align=center bgcolor="#101721" style="color: #ffffff">
       <tr>
         <th>Team Name</th> <!-- Creating the table seen by the admin that will display all the teams on the Scrum database and giving them the option to edit/remove teams if needed -->
       </tr>
-      <tr>
+      
+      <tr style="height: 50px">
         <td align=center class=open><br><a href="getUsername.php">Scrumbledore's Army</a><br></td>
       </tr>
-      <tr>
+
+      <tr style="height: 50px">
         <td align=center class=open><br><a href="#">Scrum Lords</a><br></td>
       </tr>
-      <tr>
+
+      <tr style="height: 50px">
         <td align=center class=open><br><a href="#">Scrum of the Earth</a><br></td>
       </tr>
     </table>
