@@ -29,8 +29,9 @@
                     </div>
 
                 </div>
-
+               
                 <a href="#">Project</a>
+                <a href="#">Team</a>
                 <a href="#">Home</a>
             </div>
 

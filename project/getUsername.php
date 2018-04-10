@@ -11,8 +11,28 @@
 
 <!-- form to take in input from admin/SM-->
 <html>
+	<head>
+	<meta charset="utf-8">
     <title>ADD USER TO TEAM</title>
-    <body>
+	<link rel="stylesheet" href="navbar.css">
+	</head>
+
+    <body background="bridge.jpg">
+
+
+	<div class="navbar">
+		<div class="dropdown">
+			<button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
+			<div class="dropdown-content">
+				<a href="#">Profile</a>
+				<a href="adduser.php">Add User</a>
+				<a href="getTeamName.php">Add Team</a>
+				<a href="logout.php">Log Out</a>
+			</div>
+		</div>
+		<a href="Admin.php">Home</a>
+	</div>
+
         <form action="addUserToTeam.php" method="POST">
             <input type="text" name="username" placeholder="Username">
 	    <select name="teamname">

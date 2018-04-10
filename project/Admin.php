@@ -24,12 +24,14 @@
       <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
       <div class="dropdown-content">
         <a href="#">Profile</a>
-        <a href="adduser.php">Add User</a>
-        <a href="getTeamName.php">Add Team</a>
         <a href="logout.php">Log Out</a>
       </div>
     </div>
-     <a href="#">Home</a>
+    <a href="getTeamName.php">Add Team</a>
+    <a href="adduser.php">Add User</a>
+    <a href="getTeamName.php">Teams</a>
+    <a href="#">Home</a>
+    
   </div>
 
   <section class="content" style="margin-top: 70px">
