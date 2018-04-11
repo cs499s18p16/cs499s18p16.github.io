@@ -35,10 +35,12 @@
 
         <form action="addUserToTeam.php" method="POST">
             <input type="text" name="username" placeholder="Username">
-	    <select name="teamname">
+	    <select name="teamname"> <!-- dropdown menu (different teams admin can add user to) -->
 	      	  <?php
-		     $sql="SELECT * FROM teams";
-		     $result = $connection->query($sql);
+		     $sql="SELECT * FROM teams"; /* Team table in the database */
+			 $result = $connection->query($sql);
+
+		  /* Print all team names on screen [in the dropdown menu] */
 		  while($row = $result->fetch_assoc())
 		  {
 		  $TID=$row['TID'];
