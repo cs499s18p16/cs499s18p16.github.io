@@ -36,7 +36,8 @@ else // if the correct credentials are entered, based on who logs in certain cod
          header("Location: defaultPage.html");
        }
        else{
-       header("Location: teamMember.php");
+           //header("Location: teamMember.php");
+            echo $_SESSION['user']['TID'];
       }
      }
    }
