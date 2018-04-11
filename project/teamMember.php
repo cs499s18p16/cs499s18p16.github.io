@@ -5,9 +5,6 @@
 	header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      	die;
      }
-
-//     $username = $_SESSION['user']; //store username
-  //   $teamname = "SELECT TID FROM users, teams WHERE users.TID = teams.TID AND users.email = $username"; //pull the team name from the database that matches that user
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +33,7 @@
 
   <section class="content">
 
-  <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Scrumbledore's Army</h2> <!-- dynamically display whatever team name the user in the session is a member of -->
+  <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc"><?php echo($_SESSION['user']['TID']);?></h2> <!-- dynamically display whatever team name the user in the session is a member of -->
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>
       <th width=5%>Monday</th>

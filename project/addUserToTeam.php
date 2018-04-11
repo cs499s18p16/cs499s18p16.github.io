@@ -13,7 +13,8 @@ $username = $_POST['username']; //username to add to team
 
 $sql = "SELECT * FROM users WHERE email = '$username'"; //query to determine if user exists
 $result = $connection->query($sql);
-if(!isset($result)){
+if(!isset($result))
+{
 	echo $connection->error;
 }
 else

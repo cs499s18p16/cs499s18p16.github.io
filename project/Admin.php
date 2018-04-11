@@ -29,7 +29,7 @@
     </div>
     <a href="getUserName.php">Add User to Team</a>
     <a href="adduser.php">Add User</a>
-    <a href="getTeamName.php">Teams</a>
+    <a href="getTeamName.php">Add Team</a>
     <a href="Admin.php">Home</a>
     
   </div>

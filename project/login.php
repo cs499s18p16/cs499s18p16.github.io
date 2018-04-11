@@ -19,10 +19,12 @@ else // if the correct credentials are entered, based on who logs in certain cod
   $_SESSION['user'] = array();
   $_SESSION['user'] = $row;
 
-  if (isset($_SESSION['user']['role'])){
+  if (isset($_SESSION['user']['role']))
+  {
     
     /* ADMIN */
-    if ($_SESSION['user']['role'] == 'admin'){// if the admin credentials are entered, they will be directed to the admin landing page
+    if ($_SESSION['user']['role'] == 'admin') // if the admin credentials are entered, they will be directed to the admin landing page
+    {
       header("Location: Admin.php");
     }
 
@@ -33,24 +35,23 @@ else // if the correct credentials are entered, based on who logs in certain cod
     }
 
     /* PRODUCT OWNER */
-    if ($_SESSION['user']['role'] == 'product owner'){
+    if ($_SESSION['user']['role'] == 'product owner')
+    {
       header("Location: productOwner.php");
     }
 
     /* DEVELOPER */
-    if ($_SESSION['user']['role'] == 'developer'){
-      $sql="SELECT * FROM teams"; /* Team table in the database */
-      $result = $connection->query($sql);
-      $TID=$row['TID'];
-
-      if ($TID == NULL){/* If user hasn't been added to a team yet */
+    if ($_SESSION['user']['role'] == 'developer')
+    {
+       if ($_SESSION['user']['TID'] == NULL)
+       {/* If user hasn't been added to a team yet */
         header("Location: defaultPage.html"); /* redirect to the default page */
-      }
-      else{
-      header("Location: teamMember.php"); /* redirect to team/developer landing page */
-      }
-
-    }
+       }
+       else
+       {
+        header("Location: teamMember.php"); /* redirect to team/developer landing page */
+       }
+     }
 
   }//end if --- redirection to landing pages 
 
