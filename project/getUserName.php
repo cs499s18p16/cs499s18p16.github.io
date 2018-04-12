@@ -35,30 +35,28 @@
 
     <form action="addUserToTeam.php" method="POST">
         <input type="text" name="username" placeholder="Username">
-            
 	    <?php
-            if(!isset($_POST['teamname'])){
-                echo("<select name=\"teamname\">");
-                $sql="SELECT * FROM teams"; /* Team table in the database */
-                $result = $connection->query($sql);
-                     
-                /* Print all team names on screen [in the dropdown menu] */
-                while($row = $result->fetch_assoc())
+                if(!isset($_POST['teamname']))
                 {
-                    $TID=$row['TID'];
-                    echo("<option value=\"$TID\">$TID</option>");
-                }
+                        echo("<select name=\"teamname\">");
+                        $sql="SELECT * FROM teams"; /* Team table in the database */
+                        $result = $connection->query($sql);
+                     
+                        /* Print all team names on screen [in the dropdown menu] */
+                        while($row = $result->fetch_assoc())
+                        {
+                                $TID=$row['TID'];
+                                echo("<option value=\"$TID\">$TID</option>");
+                        }
                 
-                echo("</select>");
-            }
-            else
-            {
-                echo("<input type=\"hidden\" name=\"teamname\" value=\""
-                .$_POST['teamname']."\">");
-            }
-        ?>
-
-	    <button type="submit">ADD</button>
+                        echo("</select>");
+                }
+                else
+                {
+                        echo("<input type=\"hidden\" name=\"teamname\" value=\"".$_POST['teamname']."\">");
+                }
+            ?>
+        <button type="submit">ADD</button>
     </form>
 
 	<p>
