@@ -31,7 +31,18 @@
   </div>
 
   <section class="content">
-    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">Welcome to Scrumbledore's Army</h2>
+    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">
+        <?php
+                if(isset($_SESSION['user']['TID']))
+                {
+                        echo($_SESSION['user']['TID']);
+                }
+                else
+                {
+                        echo("You are not yet part of a team.");
+                }
+        ?>
+    </h2>
 
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>

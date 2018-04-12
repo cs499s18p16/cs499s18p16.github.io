@@ -40,7 +40,16 @@
 
         <section class="content" style="margin-top: 70px">
             <h2 style="font-family: cursive; font-size: 50px; text-align:center; color: #cfd8dc">
-                Welcome To Scrumbledore's Army
+                <?php
+                        if(isset($_SESSION['user']['TID']))
+                        {
+                                echo($_SESSION['user']['TID']);
+                        }
+                        else
+                        {
+                                echo("You are not yet part of a team.");
+                        }
+                 ?>
             </h2> <!-- Team name -->
             
 
