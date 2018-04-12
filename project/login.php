@@ -43,16 +43,8 @@ else // if the correct credentials are entered, based on who logs in certain cod
     /* DEVELOPER */
     if ($_SESSION['user']['role'] == 'developer')
     {
-       if (!isset($_SESSION['user']['TID']))
-       {/* If user hasn't been added to a team yet */
-        header("Location: defaultPage.html"); /* redirect to the default page */
-       }
-       else
-       {
         header("Location: teamMember.php"); /* redirect to team/developer landing page */
-       }
-     }
-
+    }
   }//end if --- redirection to landing pages 
 
 }//end else

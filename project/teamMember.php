@@ -33,7 +33,18 @@
 
   <section class="content">
 
-  <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc"><?php echo($_SESSION['user']['TID']);?></h2> <!-- dynamically display whatever team name the user in the session is a member of -->
+  <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">
+      <?php
+        if(isset($_SESSION['user']['TID']))
+        {
+                echo($_SESSION['user']['TID']);
+        }
+        else
+        {
+                echo("You are not yet part of a team.");
+        }
+      ?>
+  </h2> <!-- dynamically display whatever team name the user in the session is a member of -->
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>
       <th width=5%>Monday</th>
