@@ -4,7 +4,8 @@
 	 {
 		header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      	 	die;
-     	 }
+   }
+   require 'connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,44 +20,52 @@
 
   <body background="twocars.jpg">
 
-  <div class="navbar">
-    <div class="dropdown">
-      <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
-      <div class="dropdown-content">
-        <a href="#">Profile</a>
-        <a href="logout.php">Log Out</a>
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="logout.php">Log Out</a>
+        </div>
       </div>
-    </div>
-    <a href="getUserName.php">Add User to Team</a>
-    <a href="adduser.php">Add User</a>
-    <a href="getTeamName.php">Add Team</a>
-    <a href="Admin.php">Home</a>
-    
-  </div>
-
-  <section class="content" style="margin-top: 70px">
-    <h2 style="font-family: cursive; font-size: 50px; text-align:center; color: #cfd8dc">Welcome, <?php echo($_SESSION['user']['email']) ?> </h2> <!-- Landing page will recognize who has logged in and give them a greeting at the top with their name -->
-
-  
-    <table border=1 width=35% align=center bgcolor="#101721" style="color: #ffffff">
-      <tr>
-        <th>Team Name</th> <!-- Creating the table seen by the admin that will display all the teams on the Scrum database and giving them the option to edit/remove teams if needed -->
-      </tr>
+      <a href="getUserName.php">Add User to Team</a>
+      <a href="adduser.php">Add User</a>
+      <a href="getTeamName.php">Add Team</a>
+      <a href="Admin.php">Home</a>
       
-      <tr style="height: 50px">
-        <td align=center class=open><br><a href="getUsername.php">Scrumbledore's Army</a><br></td>
-      </tr>
-
-      <tr style="height: 50px">
-        <td align=center class=open><br><a href="#">Scrum Lords</a><br></td>
-      </tr>
-
-      <tr style="height: 50px">
-        <td align=center class=open><br><a href="#">Scrum of the Earth</a><br></td>
-      </tr>
-    </table>
-  </section>
-
+    </div>
+    
+    <section class="content" style="margin-top: 70px">
+      <h2 style="font-family: cursive; font-size: 50px; text-align:center; color: #cfd8dc">Welcome, <?php echo($_SESSION['user']['email']) ?> </h2> <!-- Landing page will recognize who has logged in and give them a greeting at the top with their name -->
+      
+      <form action="getUserName.php" method="POST">
+        <table border=1 width=35% align=center bgcolor="#101721" style="color: #ffffff">
+          <tr>
+            <th>Team Name</th><th>Add User</th> <!-- Creating the table seen by the admin that will display all the teams on the Scrum database and giving them the option to edit/remove teams if needed -->
+          </tr>
+          <?php
+             $sql = "Select * from teams";
+             $result = $connection->query($sql);
+             if(!isset($result))
+             {
+                echo("<tr><td>$connection->error</td></tr>");
+             }
+             else
+             {
+             while($row = $result->fetch_assoc())
+             {
+                $TID=$row['TID'];
+                echo("<tr style=\"height: 50px\">");
+                echo("<td align=center class=open>".$TID."</td>");
+                echo("<td align=center class=open>");
+                echo(" <button type=\"submit\" name=\"teamname\" value=\"".$TID."\">");
+                echo("Add </button></td></tr>");
+             }
+          ?>
+        </table>
+      </form>
+    </section>
+    
   </body>
 
 </html> <!-- end of the HTML code for the admin page -->

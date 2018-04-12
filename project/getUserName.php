@@ -39,7 +39,7 @@
 	      	  <?php
 		     $sql="SELECT * FROM teams"; /* Team table in the database */
 			 $result = $connection->query($sql);
-
+                         
 		  /* Print all team names on screen [in the dropdown menu] */
 		  while($row = $result->fetch_assoc())
 		  {
