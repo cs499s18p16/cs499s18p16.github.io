@@ -44,21 +44,16 @@
             <th>Team Name</th><th>Add User</th> <!-- Creating the table seen by the admin that will display all the teams on the Scrum database and giving them the option to edit/remove teams if needed -->
           </tr>
           <?php
-             $sql = "Select * from teams";
+             $sql = "SELECT * FROM teams";
              $result = $connection->query($sql);
-             if(!isset($result))
-             {
-                echo("<tr><td>$connection->error</td></tr>");
-             }
-             else
-             {
+             if(isset($result))
              while($row = $result->fetch_assoc())
              {
                 $TID=$row['TID'];
                 echo("<tr style=\"height: 50px\">");
-                echo("<td align=center class=open>".$TID."</td>");
+                echo("<td align=center class=open>$TID</td>");
                 echo("<td align=center class=open>");
-                echo(" <button type=\"submit\" name=\"teamname\" value=\"".$TID."\">");
+                echo("<button type=\"submit\" name=\"teamname\" value=\"$TID\">");
                 echo("Add </button></td></tr>");
              }
           ?>

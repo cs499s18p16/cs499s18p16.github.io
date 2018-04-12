@@ -35,19 +35,29 @@
 
         <form action="addUserToTeam.php" method="POST">
             <input type="text" name="username" placeholder="Username">
-	    <select name="teamname"> <!-- dropdown menu (different teams admin can add user to) -->
-	      	  <?php
-		     $sql="SELECT * FROM teams"; /* Team table in the database */
-			 $result = $connection->query($sql);
+            
+	      <?php
+                     if(!isset($_POST['teamname']))
+                     {
+                        echo("<select name=\"teamname\">");
+	                $sql="SELECT * FROM teams"; /* Team table in the database */
+	                $result = $connection->query($sql);
                          
 		  /* Print all team names on screen [in the dropdown menu] */
-		  while($row = $result->fetch_assoc())
-		  {
-		  $TID=$row['TID'];
-		  echo("<option value=\"$TID\">$TID</option>");
-		  }      
+	                while($row = $result->fetch_assoc())
+                        {
+                                $TID=$row['TID'];
+	      	                echo("<option value=\"$TID\">$TID</option>");
+	                }
+                        echo("</select>");
+                     }
+                     else
+                     {
+                     echo("<input type=\"hidden\" name=\"teamname\" value=\""
+                          .$_POST['teamname']."\">");
+                     }
 		  ?>
-	    </select>
+
 	    <button type="submit">ADD</button>
         </form>
 	<p>
