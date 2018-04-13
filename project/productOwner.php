@@ -26,9 +26,9 @@
         <a href="#">Profile</a>
         <a href="logout.php">Log Out</a>
       </div>
-      <a href="#">Add Project</a>
     </div>
-     <a href="#">Home</a>
+    <a href="getProjectName.php">Add Project</a>
+    <a href="#">Home</a>
   </div>
 
   <section class="content">

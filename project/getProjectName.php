@@ -5,6 +5,7 @@ to the tool and a team.
 -->
 
 <?php
+    require 'connect.php';
     session_start();
 ?>
 
@@ -27,11 +28,13 @@ to the tool and a team.
                 <a href="logout.php">Log Out</a>
             </div>
         </div>
-        <a href="#">Home</a>
+        <a href="productOwner.php">Home</a>
     </div>
 
     <form action="addproject.php" method="POST">
         <input type="text" name="projectname" placeholder="Project Name">
         <button type="submit">ADD</button>
     </form>
+
+    </body>
 </html>
