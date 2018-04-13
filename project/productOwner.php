@@ -26,6 +26,7 @@
         <a href="#">Profile</a>
         <a href="logout.php">Log Out</a>
       </div>
+      <a href="#">Add Project</a>
     </div>
      <a href="#">Home</a>
   </div>
@@ -33,14 +34,14 @@
   <section class="content">
     <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">
         <?php
-                if(isset($_SESSION['user']['TID']))
-                {
-                        echo($_SESSION['user']['TID']);
-                }
-                else
-                {
-                        echo("You are not yet part of a team.");
-                }
+            if(isset($_SESSION['user']['TID']))
+            {
+                    echo($_SESSION['user']['TID']);
+            }
+            else
+            {
+                    echo("You are not yet part of a team.");
+            }
         ?>
     </h2>
 
