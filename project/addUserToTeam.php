@@ -13,20 +13,21 @@ $username = $_POST['username']; //username to add to team
 
 $sql = "SELECT * FROM users WHERE email = '$username'"; //query to determine if user exists
 $result = $connection->query($sql);
+
 if(!isset($result))
 {
 	echo $connection->error;
 }
 else
 {
-$row = $result->fetch_assoc();
-if(isset($row))
-{
-	$sql = "UPDATE users SET TID = '$teamname' WHERE UID = ". $row['UID'];
-	$connection->query($sql);
+    $row = $result->fetch_assoc();
+    if(isset($row))
+    {
+        $sql = "UPDATE users SET TID = '$teamname' WHERE UID = ". $row['UID'];
+        $connection->query($sql);
 
-}
-header("Location: Admin.php");
+    }
+    header("Location: Admin.php");
 }
 ?>
 

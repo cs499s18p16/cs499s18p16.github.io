@@ -55,7 +55,7 @@
                 {
                         echo("<input type=\"hidden\" name=\"teamname\" value=\"".$_POST['teamname']."\">");
                 }
-            ?>
+        ?>
         <button type="submit">ADD</button>
     </form>
 
