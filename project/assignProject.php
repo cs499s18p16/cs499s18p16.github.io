@@ -14,7 +14,7 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title>ADD PROJECT TO TEAM,/title>
+    <title>ADD PROJECT TO TEAM</title>
     <link rel="stylesheet" href="navbar.css">
     </head>
 
@@ -31,6 +31,12 @@
     
         <a href="productOwner.php">Home</a>
     </div>
+
+    <form action="addTeamToProject.php" method="POST">
+        <input type="text" name="teamname" placeholder="Team Name">
+        <input type="text" name="projectname" placeholder="Project Name">
+        <button type="submit">ADD</button>
+    </form>
 
     
     </body>

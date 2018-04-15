@@ -27,7 +27,7 @@
         <a href="logout.php">Log Out</a>
       </div>
     </div>
-    <a href="#">Assign Project to Team</a>
+    <a href="assignProject.php">Assign Project to Team</a>
     <a href="getProjectName.php">Add Project</a>
     <a href="#">Home</a>
   </div>
