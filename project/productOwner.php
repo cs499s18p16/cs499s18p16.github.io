@@ -5,6 +5,7 @@
 	header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      die;
      }
+     require 'connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -33,39 +34,27 @@
   </div>
 
   <section class="content">
-    <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">
+    
         <?php
-            if(isset($_SESSION['user']['TID']))
+        
+            $sql = "SELECT * from projects where PO = " . $_SESSION['user']['UID'];
+            $result = $connection->query($sql);
+            if(isset($result))
             {
-                    echo($_SESSION['user']['TID']);
+                echo("<table border=1 width=35% align=center bgcolor=\"#101721\"");
+                echo("<tr><th>Projects</th></tr>");
+                while($row = $result->fetch_assoc())
+                {
+                        echo("<tr><td align= \"center\">" . $row['PID'] . "</td></th>");
+                }
+                echo("</table>");
             }
             else
             {
-                    echo("You are not yet part of a team.");
+                echo($connection->error);
             }
+            
         ?>
-    </h2>
-
-    <table border=1 width=75% align=center bgcolor="#101721" >
-      <tr>
-      <th width=5%>Monday</th>
-      <th width=5%>Tuesday</th>
-      <th width=5%>Wednesday</th>
-      <th width=5%>Thursday</th>
-      <th width=5%>Friday</th>
-      <th width=5%>Saturday</th>
-      <th width=5%>Sunday</th>
-      </tr>
-      <tr>
-      <td align=center class=open><br>95%<br> </td>
-      <td align=center class=open><br>90%<br> </td>
-      <td align=center class=open><br>97%<br> </td>
-      <td align=center class=open><br>85%<br> </td>
-      <td align=center class=open><br>80%<br> </td>
-      <td align=center class=open><br>65%<br> </td>
-      <td align=center class=open><br>50%<br> </td>
-      </tr>
-    </table>
   </section>
 
   </body>
