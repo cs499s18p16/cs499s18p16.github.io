@@ -5,6 +5,8 @@
 	header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      	die;
     }*/
+    require 'connect.php';
+    session_start();
 ?>
 
 <!DOCTYPE html>

@@ -27,8 +27,8 @@
         <a href="logout.php">Log Out</a>
       </div>
     </div>
-     <a href="#">Availability</a>
-     <a href="#">Home</a>
+     <a href="availability.php">Availability</a>
+     <a href="teamMember.php">Home</a>
   </div>
 
   <section class="content">
