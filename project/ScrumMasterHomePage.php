@@ -31,8 +31,17 @@
                 </div>
                
                 <a href="#">Project</a>
-                <a href="#">Team</a>
-                <a href="#">Home</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()">Team<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="removeDeveloper.php">Remove Developer</a>
+                        <a href="addDeveloper.php">Add Developer</a>
+                    </div>
+
+                </div>
+
+                <a href="ScrumMasterHomePage.php">Home</a>
             </div>
 
 

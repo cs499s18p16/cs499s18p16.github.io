@@ -27,7 +27,7 @@ else
         $connection->query($sql);
 
     }
-    header("Location: Admin.php");
+    header("Location: Admin.php"); 
 }
 ?>
 

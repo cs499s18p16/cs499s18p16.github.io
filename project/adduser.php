@@ -21,18 +21,19 @@
   <body background="bridge.jpg">
 
     	<div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
-          <div class="dropdown-content">
-            <a href="#">Profile</a>
-            <a href="adduser.php">Add User</a>
-            <a href="getTeamName.php">Add Team</a>
-            <a href="logout.php">Log Out</a>
-          </div>
+      <div class="dropdown">
+        <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button> <!-- Creating a dropdown bar in the top right corner to allow the admin to manuever through their page -->
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="logout.php">Log Out</a>
         </div>
-        
-        <a href="Admin.php">Home</a>
       </div>
+      <a href="getUserName.php">Add User to Team</a>
+      <a href="adduser.php">Add User</a>
+      <a href="getTeamName.php">Add Team</a>
+      <a href="Admin.php">Home</a>
+      
+    </div>
 
     <form action="signup.php" method="POST">
       <input type="text" name="username" placeholder="Username">
