@@ -1,3 +1,4 @@
 #exclude secondary files from emacs
 *~
 *#*#
+.DS_Store
