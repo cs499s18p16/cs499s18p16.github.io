@@ -19,7 +19,8 @@ to the tool and a team.
     </head>
 
     <body background="bridge.jpg">
-
+    
+    <!-- Navigation bar at the top of the page, which contains menu options My Account, Profile, Logout, and Home.-->
     <div class="navbar">
         <div class="dropdown">
             <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button>
@@ -31,6 +32,8 @@ to the tool and a team.
         <a href="productOwner.php">Home</a>
     </div>
 
+<!--Form which collects the name of the project the PO wants to create.
+    Send the project name to addproject.php, which adds the project to the database. -->
     <form action="addproject.php" method="POST">
         <input type="text" name="projectname" placeholder="Project Name">
         <button type="submit">ADD</button>

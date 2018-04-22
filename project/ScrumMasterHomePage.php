@@ -18,7 +18,8 @@
 
     <body background="twocars.jpg">
         <div class="wrapper">
-
+            
+            <!--Navigation bar that allows the Scrum Master to navigate through the various pages/functions of their account. -->
             <div class="navbar">
 
                 <div class="dropdown">
@@ -50,6 +51,7 @@
         <section class="content" style="margin-top: 70px">
             <h2 style="font-family: cursive; font-size: 50px; text-align:center; color: #cfd8dc">
                 <?php
+                        //Display the team name of the user if they are on a team
                         if(isset($_SESSION['user']['TID']))
                         {
                                 echo($_SESSION['user']['TID']);

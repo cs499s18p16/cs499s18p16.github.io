@@ -19,7 +19,8 @@
     </head>
 
     <body background="bridge.jpg">
-    
+
+    <!--Menus of the Navigation bar at top of page -->    
     <div class="navbar">
         <div class="dropdown">
             <button class="dropbtn">My Account<i class="fa far-caret-down"></i></button>
@@ -31,7 +32,9 @@
     
         <a href="productOwner.php">Home</a>
     </div>
-
+    
+    <!--Form that collects the project name to assign, and the team to assign the project to.
+        Sends the to assTeamToProject.php, which uses them to update the database. -->
     <form action="addTeamToProject.php" method="POST">
         <input type="text" name="teamname" placeholder="Team Name">
         <input type="text" name="projectname" placeholder="Project Name">

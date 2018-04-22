@@ -23,27 +23,27 @@ else // if the correct credentials are entered, based on who logs in certain cod
   {
     
     /* ADMIN */
-    if ($_SESSION['user']['role'] == 'admin') // if the admin credentials are entered, they will be directed to the admin landing page
+    if ($_SESSION['user']['role'] == 'admin') // if the admin credentials are entered the user will be directed to the admin landing page
     {
       header("Location: Admin.php");
     }
 
     /* SCRUM MASTER */
-    if ($_SESSION['user']['role'] == 'scrum master') // if the scrum master credentials are entered they user will be taken to the scrum master landing page
+    if ($_SESSION['user']['role'] == 'scrum master') // if the scrum master credentials are entered the user will be taken to the scrum master landing page
     {
       header("Location: ScrumMasterHomePage.php");
     }
 
     /* PRODUCT OWNER */
-    if ($_SESSION['user']['role'] == 'product owner')
+    if ($_SESSION['user']['role'] == 'product owner') //if the Product Owner credentials are entered the user will be taken to the product owner landing page
     {
       header("Location: productOwner.php");
     }
 
     /* DEVELOPER */
-    if ($_SESSION['user']['role'] == 'developer')
+    if ($_SESSION['user']['role'] == 'developer') //if the team member/developer credentials are entered the user will be taken to the developer landing page
     {
-        header("Location: teamMember.php"); /* redirect to team/developer landing page */
+        header("Location: teamMember.php"); 
     }
   }//end if --- redirection to landing pages 
 

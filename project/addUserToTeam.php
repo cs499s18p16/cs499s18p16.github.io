@@ -14,11 +14,12 @@ $username = $_POST['username']; //username to add to team
 $sql = "SELECT * FROM users WHERE email = '$username'"; //query to determine if user exists
 $result = $connection->query($sql);
 
+//if the user doesn't exist, report error
 if(!isset($result))
 {
 	echo $connection->error;
 }
-else
+else //else, update the user's row in the user table to reference the TID (team ID) of the team chosen to add to
 {
     $row = $result->fetch_assoc();
     if(isset($row))
