@@ -7,19 +7,19 @@
   <ul style="list-style-type:square">
     <li><b>Database</b></li>
       <ul style="list-style-type:disk">
-        <li>Use MySQL database, which is an open source search-query language database management system, to store the login information of each employee on the Scrum team, as well as each week's productivity statistics</li>
-        <li>Specifically, be able to store a team member's individual capacity in points, the point values for sprint stories, and from there be able to calculate total capacity for each sprint (<b>essential</b>).  If time allows, also be able to store and manipulate data necessary to calculate sprint velocity (<b>stretch goal</b>).</li>
+        <li>Use MySQL database, which is an open source search-query language database management system, to store the login information of each employee on the Scrum team, as well as each week's availability statistics (unavailable hours per person, working hours in a day/week, sprint cadence a.k.a. sprint length)</li>
+        <li>Essential: store and be able to manipulate team member availability in decimal format by number of hours, compute team availability percentage from individual team member availabilities. Stretch goal: extend availability functionality to by dynamic as far forward as 3 sprints.  Also, compute capacity per sprint for any team. </li>
     </ul>
     <li><b>Web Application</b></li>
       <ul style="list-style-type:disk">
-        <li>The site will be hosted via Amazon Web Services.</li>
-        <li>This site will house all the databases and will be accessible by all qualified employees using a secure login unique to each of them</li>
+        <li>The tool will be hosted on a LAMP (Linux-Apache-MySQL-PHP) compatible server.</li>
+        <li>This site will house all the databases and will be accessible by all qualified employees using a secure login to the web appilication that is unique to each of them</li>
         <li>GUI for Windows and Mac OS</li>
         <li>HTTPS will be used for secure login</li>
       </ul>
     <li><b>User Interface</b></li>
        <ul style="list-style-type:disk">
-         <li>The web application and database backend UI requirements are not yet set in stone.  Details to come.</li>
+         <li>Simplistic look and feel, using color scheme compatible for all viewers (no color combinations that conflict with color-blind vision)</li>
     </ul>
 
     <h2>Effort and Size Estimation</h2>
@@ -107,9 +107,8 @@
       <li>Github - Used this free repository service to store all of our code and give everyone easy access to the most revently updated files.</li>
       </br>
       <li>MySQL - Used for the back-end database to store all scrum team information and data.</li>
-      <li>Amazon AWS - Using AWS services to host the web application site and be accessible from any browser</li>
       <li> IE 10 - Using Internet Explorer as this is what is primarily used at Toyota.</li>
-      <li> JavaScript - Using this language as the base code for the project; possibilty of having to use some PHP as well.</li>
+      <li> PHP 7 - Using this language as the base code for the project, with some HTML and CSS for the web interface.</li>
       
 
     </ul>
