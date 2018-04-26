@@ -30,7 +30,9 @@
         <a href="Admin.php">Home</a>
         
         </div>
-
+        
+        <!--Form which collects the name of the team the Admin wants to create.
+            Send the team name to addteam.php, which adds the team to the database. -->
         <form action="addteam.php" method="POST">
             <input type="text" name="teamname" placeholder="Team Name">
             <button type="submit">ADD</button>

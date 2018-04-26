@@ -34,7 +34,8 @@
   <section class="content">
 
   <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">
-      <?php
+    <?php
+        //if the user is on a team, display their team name
         if(isset($_SESSION['user']['TID']))
         {
                 echo($_SESSION['user']['TID']);
@@ -44,7 +45,7 @@
                 echo("You are not yet part of a team.");
         }
       ?>
-  </h2> <!-- dynamically display whatever team name the user in the session is a member of -->
+  </h2> 
     <table border=1 width=75% align=center bgcolor="#101721" >
       <tr>
       <th width=5%>Monday</th>

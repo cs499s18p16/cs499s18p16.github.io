@@ -20,6 +20,7 @@
 
   <body>
 
+  <!--Navigation bar at top of page which gives the PO the menu options My Account, Profile, Logout, Assign Projec to Team, Add Project, and Home. --> 
   <div class="navbar">
     <div class="dropdown">
       <button class="dropbtn">My Account<i class="fa fa-caret-down"></i></button>
@@ -34,10 +35,12 @@
   </div>
 
   <section class="content">
-    <?php
+<?php
+            //select all the projects from the database that the current user is product owner of
             $sql = "SELECT * FROM projects WHERE PO=".$_SESSION['user']['UID'];
             $result = $connection->query($sql);
 
+            //as long as there are projects, display their names in a dynamically populated table on the user's landing page
             if(isset($result)){
                 echo("<table border=1 width=35% align=center bgcolor=\"#101721\">");
                 echo("<tr><th>Projects</th></tr>");

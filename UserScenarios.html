@@ -8,18 +8,19 @@
   <b>Scrum Master/Admin: Adding a user to a team</b>
   <ol>
     <li>User logs in as a Scrum Master/Admin, and <b>their role is confirmed</b> by the database backend.</li>
-    <li>The Scrum Master/Admin navigates to the “Team Settings" page and chooses the option to add a member to their team.</li>
+    <li>The Scrum Master/Admin navigates to the “Team"-->"Add Developer"/Add User to Team" pages resepctively, to choose the option to add a member to their team.</li>
     <li>The database verifies the credentials of the team member to be added.</li>
-    <li> If they are present in the system, they are added to the team.  They can then log in to the scrum tools webpage and see the project landing page instead of the default landing page.</li>
-    <li>If they’re not present in the system, the scrum master will receive an error message telling them that user does not exist.</li>
+    <li> If the team member is present in the system, they are added to the team.  They can then log in to the scrum tools webpage and see the project landing page instead of the default landing page.</li>
+    <li>If they’re not present in the system, the scrum master/admin will receive an error message telling them that user does not exist and therefore cannot be added to the team.</li>
   </ol>
 
   <b>Scrum Master: viewing team availability</b>
   <ol>
     <li> Scrum Master will attempt login.  Database will attempt to verify their credentials.</li>
-    <li>Upon success, Scrum Master wil be taken to their landing page for their project.</li>
-    <li>The landing page will show a calendar which will display each team member's cumulative availability by the hour, for a one week period.</li>
-    <li>The scrum master can then click on "Project" and see the team data for total capacity for the sprint.</li>
+    <li>Upon success, Scrum Master will be taken to their landing page for their project.</li>
+    <li>The landing page will show a calendar which will display daily availability for one sprint as a percentage computed by: [(total working hours - total unavailable developer hours)/total working hours] * 100</li>
+    <li>The calendar will change dynamically with the availabilities entered by each team member.</li>
+    <li>The SM or PO will be able to navigate through this calendar up to three sprints ahead.</li>
   </ol>
 
   <b>Developer (Team Member): First time login</b>
@@ -33,9 +34,9 @@
   <ol>
     <li>The admin attempts to log in to the webpage.</li>
     <li>Database verifies their credentials and allows them to access their own unique landing page.</li>
-    <li>Admin navigates to a page with a list of teams, and chooses the option to add a new team.</li>
-    <li>“Add Team” option expands to allow admin to input the scrum master ID of the scrum master of the team, as well as the credentials of the scrum master, developers, and product owner.</li>
-    <li>Their credentials are added to the database, so that when they log in, all users on the team will be taken to the project landing page of the team rather than the default landing page.</li>
+    <li>Admin navigates to a home page with a dynamically populated list of existing teams, and chooses the option to add a new team.</li>
+    <li>“Add Team” option expands to allow admin to input the TID (team name) of the team.</li>
+    <li>After a team of name <teamname> is created in the database, the admin will be sent back to their homepage.  Here, they can choose the option to add users to the new team, or create another new team or add more users to the tool.</li>
   </ol>
 
   <b>Product Owner: viewing team progress</b>
