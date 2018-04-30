@@ -56,7 +56,7 @@
 
                     if(isset($result))
                     while($row = $result->fetch_assoc())
-                    {
+                    { /* prompt */
                         $email=$row['email'];
                         echo("<tr style=\"height: 50px\">");
                         echo("<td align=center class=open>$email</td>");

@@ -1,8 +1,15 @@
+<!--
+File: teamMember.php
+Purpose: This is the developer landing page; It contains details pertaining only to the developer's 
+        team, i.e. team availability.    
+-->
+
 <?php
+     require 'connect.php';
      session_start();
      if(!isset($_SESSION['user']['role']) || $_SESSION['user']['role'] != 'developer')
      {
-	header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
+	    header("Location: index.php"); // conditional logic to confirm user has logged in and cannot access certain pages directly
      	die;
      }
 ?>
@@ -14,10 +21,10 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome | Home Page</title>
-    <link rel="stylesheet" href="TM_style_sheet.css">
+    <link rel="stylesheet" href="navbar.css">
   </head>
 
-  <body>
+  <body background="twocars.jpg">
 
   <div class="navbar">
     <div class="dropdown">
@@ -31,7 +38,7 @@
      <a href="teamMember.php">Home</a>
   </div>
 
-  <section class="content">
+  <section class="content" style="margin-top: 70px; align:center">
 
   <h2 style="font-family: cursive;font-size:50px;text-align: center;color: #cfd8dc">
     <?php
@@ -46,7 +53,7 @@
         }
       ?>
   </h2> 
-    <table border=1 width=75% align=center bgcolor="#101721" >
+    <table border=1 width=75% align=center bgcolor="#101721" style="color:#ffffff">
       <tr>
       <th width=5%>Monday</th>
       <th width=5%>Tuesday</th>

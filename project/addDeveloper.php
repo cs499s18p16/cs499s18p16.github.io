@@ -50,9 +50,9 @@
                 <?php
                     if(!isset($_POST['teamname']))
                     {
-                            echo("<select name=\"teamname\">");
+                            echo("<select name=\"teamname\">"); 
                             $teamname = $_SESSION['user']['TID'];
-                            $sql = "SELECT * FROM teams WHERE TID = '$teamname'"; 
+                            $sql = "SELECT * FROM teams WHERE TID = '$teamname'"; /* ensures that SM can only add devs to their team only */
                             $result = $connection->query($sql);
                         
                             /* Print team (to add user) on screen [in the dropdown menu] */
@@ -69,7 +69,8 @@
                             echo("<input type=\"hidden\" name=\"teamname\" value=\"".$_POST['teamname']."\">");
                     }
                 ?>
-                <button type="submit">ADD</button>
+                <button type="submit">ADD</button> <!-- Add this developer and update both the front-end & the back-end -->
+                
             </form></center>
 
         </section>

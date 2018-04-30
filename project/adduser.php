@@ -1,3 +1,8 @@
+<!--
+File: adduser.php
+Purpose: Allows admin to add new users to the tool 
+-->
+
 <?php
        session_start();
        if(!isset($_SESSION['user']['role']) || $_SESSION['user']['role'] != 'admin')

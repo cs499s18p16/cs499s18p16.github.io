@@ -29,6 +29,8 @@ to the tool and a team.
                 <a href="logout.php">Log Out</a>
             </div>
         </div>
+        <a href="assignProject.php">Assign Project to Team</a>
+    <   <wa href="getProjectName.php">Add Project</a>
         <a href="productOwner.php">Home</a>
     </div>
 

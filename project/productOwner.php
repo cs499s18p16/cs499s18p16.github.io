@@ -1,3 +1,9 @@
+<!-- 
+File: productOwner.php
+Purpose: Fetch all the project names and dynamically populate the projects table 
+        found on the PO's home page
+-->
+
 <?php
     require 'connect.php';
     session_start();
@@ -15,10 +21,11 @@
   <head>
     <meta charset="utf-8">
     <title>Welcome | Home Page</title>
-    <link rel="stylesheet" href="PO_style_sheet.css">
+    <link rel="stylesheet" href="navbar.css">
+
   </head>
 
-  <body>
+  <body background="twocars.jpg">
 
   <!--Navigation bar at top of page which gives the PO the menu options My Account, Profile, Logout, Assign Projec to Team, Add Project, and Home. --> 
   <div class="navbar">
@@ -31,22 +38,23 @@
     </div>
     <a href="assignProject.php">Assign Project to Team</a>
     <a href="getProjectName.php">Add Project</a>
-    <a href="#">Home</a>
+    <a href="productOwner.php">Home</a>
   </div>
 
-  <section class="content">
-<?php
+  
+  <section class="content" style="margin-top: 70px; align; center">
+        <?php
             //select all the projects from the database that the current user is product owner of
             $sql = "SELECT * FROM projects WHERE PO=".$_SESSION['user']['UID'];
             $result = $connection->query($sql);
 
             //as long as there are projects, display their names in a dynamically populated table on the user's landing page
             if(isset($result)){
-                echo("<table border=1 width=35% align=center bgcolor=\"#101721\">");
+                echo("<table border=1 width=35% align=center bgcolor=#101721 style='color:#ffffff'>");
                 echo("<tr><th>Projects</th></tr>");
 
                 while($row = $result->fetch_assoc()){
-                    echo("<tr><td align= \"center\">".$row['PID'] . "</td></th>");
+                    echo("<tr><td height=50px align= \"center\">".$row['PID'] . "</td></tr>");
                 }
                 echo("</table>");
 
@@ -56,10 +64,7 @@
                 echo($connection->error);
             }
         ?>
-    </h2>
-
     
-
   </section>
 
   </body>
